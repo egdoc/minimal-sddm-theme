@@ -23,7 +23,7 @@ Rectangle {
     
     Background {
         anchors.fill: parent
-        source: config.background
+        source: Qt.resolvedUrl(config.background)
         fillMode: Image.PreserveAspectCrop
         onStatusChanged: {
             if (status == Image.Error && source != config.defaultBackground) {
@@ -137,7 +137,7 @@ Rectangle {
             dropDownColor: Qt.rgba(0, 0, 0, 0.2)
             borderColor: "transparent"
             textColor: "white"
-            arrowIcon: "images/arrow-down.png"
+            arrowIcon: Qt.resolvedUrl("images/arrow-down.png")
             arrowColor: "transparent"
             model: sessionModel
             index: sessionModel.lastIndex
